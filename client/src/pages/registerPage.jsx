@@ -1,4 +1,4 @@
-import { Flex,Text, Input, InputGroup, Stack, InputLeftElement,Button,WrapItem  } from '@chakra-ui/react'; 
+import { Flex,Text, Input, InputGroup, Stack, InputLeftElement,Button,WrapItem, CloseButton  } from '@chakra-ui/react'; 
 import NavBarSh from '../components/NavBarSh'; 
 import { Link } from 'react-router-dom'; 
 import { AuthRoute } from '../utils/const';
@@ -20,9 +20,12 @@ const registerPage = () => {
                 <Flex 
                 boxShadow={'rgba(0,0,0, 0.24) 0px 3px 8px'} 
                 width={'20em'} 
-                height={'55vh'} 
-                flexWrap={'wrap'} 
+                height={'55vh'}
+                justifyContent={'space-evently'}     
+                display={'flex'}
+                flexDirection={'column'}           
                 justify={'center'} 
+                alignItems={'center'}
                 > 
                     <Text mt={'7%'} fontSize={'35px'} fontWeight={'bold'} textAlign={'center'} w={'100%'} color={'Black'}> Sign up</Text> 
                     <Stack spacing={4}> 
@@ -36,17 +39,7 @@ const registerPage = () => {
                         <Input type='tel' placeholder='Login'/> 
                          
                     </InputGroup> 
-                    <InputGroup> 
-                        <InputLeftElement pointerEvents='none' width={'25px'} top={'0px'} left={'10px'}> 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 16 16"> 
-                            <path fill="currentColor" fill-rule="evenodd" d="M14.95 3.684L8.637 8.912a1 1 0 0 1-1.276 0l-6.31-5.228A.999.999 0 0 0 1 4v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a.999.999 0 0 0-.05-.316M2 2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m-.21 1l5.576 4.603a1 1 0 0 0 1.27.003L14.268 3z"/> 
-                        </svg> 
-                        </InputLeftElement> 
-                         
-                        <Input type='tel' placeholder='Email'/> 
-                         
-                    </InputGroup> 
- 
+                    
                     <InputGroup> 
                         <InputLeftElement 
                         pointerEvents='none' 
@@ -62,12 +55,21 @@ const registerPage = () => {
                         </InputLeftElement> 
                         <Input placeholder='Password'/> 
                     </InputGroup> 
+                    
                     <WrapItem> 
                         <Button colorScheme='teal' w={'250px'} textAlign={'center'}>Login</Button> 
                     </WrapItem> 
                     </Stack> 
-                    <Text mr={'5px'}> Do you have an account? <Text color={'teal'}><Link to ={AuthRoute}>Login</Link></Text></Text> 
+      
+                    <Flex  mt={'7%'}  textAlign={'center'} color={'Black'}>
+                    <Text mr={'5px'}> Do you have an account? </Text> 
+                    <Text color={'teal'}><Link to ={AuthRoute}>Login</Link> </Text>
+                </Flex>
+
+
+                
  
+
                 </Flex> 
         </Flex>
         </Flex> 

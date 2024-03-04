@@ -21,9 +21,11 @@ const AuthPage = () => {
             <Flex 
             boxShadow={'rgba(0,0,0, 0.24) 0px 3px 8px'} 
             width={'20em'} 
-            height={'65vh'} 
+            height={'55vh'} 
             flexWrap={'wrap'} 
             justify={'center'} 
+            display={'flex'}
+            justifyContent={'space-evently'}
             > 
                 <Text mt={'7%'} fontSize={'35px'} fontWeight={'bold'} textAlign={'center'} w={'100%'} color={'Black'}> Sign in</Text> 
                 <Stack spacing={4}> 

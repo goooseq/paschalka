@@ -6,7 +6,12 @@ Button:hover{
    font-size:22px;
 }
 
-
+a:hover{
+    opacity: 0.7;
+   font-size:22px;
+   background-color: #F1F7F6;
+   border-radius:13px ;
+}
 .gallery {
 background: #EEE;
 }

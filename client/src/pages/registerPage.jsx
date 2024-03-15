@@ -21,11 +21,9 @@ const registerPage = () => {
                 boxShadow={'rgba(0,0,0, 0.24) 0px 3px 8px'} 
                 width={'20em'} 
                 height={'55vh'}
-                justifyContent={'space-evently'}     
-                display={'flex'}
-                flexDirection={'column'}           
+                flexWrap={'wrap'} 
                 justify={'center'} 
-                alignItems={'center'}
+
                 > 
                     <Text mt={'7%'} fontSize={'35px'} fontWeight={'bold'} textAlign={'center'} w={'100%'} color={'Black'}> Sign up</Text> 
                     <Stack spacing={4}> 

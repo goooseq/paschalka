@@ -1,6 +1,5 @@
 import '../App.css';
 import { Text, Box, Flex, Grid, Input,Heading, Button} from '@chakra-ui/react';
-import { AuthRoute, HomeRoute, ShopRoute } from '../utils/const';
 import {Link} from 'react-router-dom'
 const Footer= () => {
     return (
@@ -10,21 +9,22 @@ const Footer= () => {
         justify={'space-between'}
         width={'100%'}
         height={'20vh'}
->
+        >
 
-<Flex   
-display={'flex'}          
-align={'center'} 
-justify-content={'space-evently'}
-width={'100%'} 
-background={'#0483'} 
-boxShadow={'rgba(0,0,0, 0.24) 0px 3px 8px;'} 
-borderRadius={'8px'} 
-padding={'10px 50px'} 
-position = {'relative'} 
-height={'20vh'}
-        
->
+        <Flex   
+        display={'flex'}          
+        align={'center'} 
+        justify-content={'space-evently'}
+        justifyContent={'space-evenly'}
+        width={'100%'} 
+        background={''} 
+        boxShadow={'rgba(0,0,0, 0.24) 0px 3px 8px;'} 
+        borderRadius={'8px'} 
+        padding={'10px 50px'} 
+        position = {'relative'} 
+        height={'20vh'}
+        marginTop={'auto'}        
+        >
 
 
 

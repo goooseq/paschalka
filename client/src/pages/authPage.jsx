@@ -25,7 +25,7 @@ const AuthPage = () => {
             flexWrap={'wrap'} 
             justify={'center'} 
             display={'flex'}
-            justifyContent={'space-evently'}
+           
             > 
                 <Text mt={'7%'} fontSize={'35px'} fontWeight={'bold'} textAlign={'center'} w={'100%'} color={'Black'}> Sign in</Text> 
                 <Stack spacing={4}> 

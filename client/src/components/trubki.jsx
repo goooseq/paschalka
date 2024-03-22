@@ -1,11 +1,11 @@
 import '../App.css';
 import { Text, Box,  Heading, Button, Link, ButtonGroup } from '@chakra-ui/react';
 import { Card, CardHeader, CardBody, Image} from '@chakra-ui/react';
-import watch from '../images/watch.jpg'
+import diver001 from '../images/diver001.jpg'
 import Carousel from './Carousel';
 import React from 'react';
 
-const  WatchItem = () =>{
+const  TrubkiItem = () =>{
     // const images = [
     //     {lasty},
     //     {lasty},
@@ -19,13 +19,13 @@ const  WatchItem = () =>{
        
         <Box>
             {<Image
-                src={watch}
-                width={'620px'}
-                height={'360px'}
+                src={diver001}
+                width={'405px'}
+                height={'405px'}
                 // width={'80%'}
-                alt='Часы'
+                alt='Ласты,маски и трубки'
             /> }
-            <Text  position={'absolute'} top={200} left={20} fontSize={'30px'} color={"white"}><b> <a href="#"> Электроника и компьютеры</a></b></Text>
+            <Text  position={'absolute'} top={160} left={10} fontSize={'30px'} color={"white"}><b> <a href="#">Ласты, маски и трубки </a></b></Text>
         </Box>
        
 
@@ -35,4 +35,4 @@ const  WatchItem = () =>{
         
     )
 }
-export default WatchItem;    
+export default TrubkiItem;    

@@ -3,7 +3,8 @@ import { Text, Box, Flex, Grid, Input,Heading, Button} from '@chakra-ui/react';
 import {Link} from 'react-router-dom'
 const Footer= () => {
     return (
-        <Flex        
+        <Flex    
+        bgColor={'#F1F7F6'}    
         display={'flex'}  
         align={'center'}
         justify={'space-between'}

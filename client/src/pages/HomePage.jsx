@@ -5,6 +5,10 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/footer';
 import WatchItem from '../components/watchItem';
 import DiversItem from '../components/divers';
+import TrubkiItem from '../components/trubki';
+import ReguliatoriItem from '../components/reguliatori';
+import KurtkaItem from '../components/kurtka';
+
 
 const HomePage = () => {
   return (
@@ -16,10 +20,16 @@ const HomePage = () => {
           
 
 
-        <Box width={'80%'} h={'500px'} bgColor={'#F1F7F6'} >
-          <Box display={'flex'}><WatchItem/>
-          <WatchItem/>
-          </Box>
+        <Box padding={0} width={'90%'} h={'900px'} >
+          <Flex mt={'50px'} justify={'center'} flexWrap={'wrap'} gap={'25px'}>
+            <DiversItem/>
+            <WatchItem/>
+          </Flex>
+          <Flex mt={6} justify={'center'} flexWrap={'wrap'} gap={'25px'}>
+          <TrubkiItem/>
+            <ReguliatoriItem/>
+            <KurtkaItem/>
+          </Flex>
 
         </Box>
 

@@ -4,6 +4,7 @@ import { Card, CardHeader, CardBody, Image} from '@chakra-ui/react';
 import divers from '../images/divers.jpg'
 import Carousel from './Carousel';
 import React from 'react';
+import watch from '../images/watch.jpg'
 
 const  DiversItem = () =>{
     // const images = [
@@ -12,37 +13,23 @@ const  DiversItem = () =>{
     //     {lasty}
     // ];
     return(
-        <Card
-            width={'400px'}
-            height={'500px'}
-            background={'#0534'}
-            boxShadow={'1px 1px  10px #808080'}
-            borderRadius={'10px'}
-        >
+        <Card>
             
 
-            <CardBody
-                display={'flex'}
-                flexDirection={'column'}
-                justifyContent={'space-evenly'}
-                alignItems={'center'}
-            >
-<Heading 
-                    fontSize={'30px'}
-                    >"КОСТЮМЫ И АКСЕССУАРЫ"</Heading>
-                        {<Image
-                            src={divers}
-                            width={'300px'}
-                            alt='дайверы'
-                        /> }
 
-                {/* <Carousel images={images} /> */}
+
+
+            
                 <Box>
-                    
-                
-
-                </Box>
-            </CardBody>
+            {<Image
+                src={divers}
+                width={'620px'}
+                height={'360px'}
+                // width={'80%'}
+                alt='Дайверы'
+            /> }
+            <Text  position={'absolute'} top={200} left={"125px"} fontSize={'30px'} color={"white"}><b> <a href="#">Костюмы и аксессуары</a></b></Text>
+        </Box>
 
 
         </Card>

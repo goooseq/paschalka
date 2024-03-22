@@ -4,7 +4,8 @@ import { AuthRoute, HomeRoute, ShopRoute } from '../utils/const';
 import {Link} from 'react-router-dom'
 const NavBar = () => {
     return (
-        <Flex          
+        <Flex 
+        bgColor={'#F1F7F6'}         
         align={'center'}
         justify={'space-between'}
         width={'100%'}

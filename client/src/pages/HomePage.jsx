@@ -17,7 +17,7 @@ const HomePage = () => {
 
 
         <Box width={'80%'} h={'500px'} bgColor={'#F1F7F6'} >
-          <Box display={'flex'}><WatchItem/>,
+          <Box display={'flex'}><WatchItem/>
           <WatchItem/>
           </Box>
 

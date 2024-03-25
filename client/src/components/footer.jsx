@@ -1,6 +1,7 @@
 import '../App.css';
 import { Text, Box, Flex, Grid, Input,Heading, Button} from '@chakra-ui/react';
 import {Link} from 'react-router-dom'
+import { ContactRoute } from '../utils/const';
 const Footer= () => {
     return (
         <Flex    
@@ -28,7 +29,9 @@ const Footer= () => {
         >
 
 
-
+                    <Link to={ContactRoute}>
+                    <Text color={'teal'}>Contacts</Text>
+                </Link>
                 <Link>
                     <Text color={'teal'}>Foreal© 2024</Text>
                 </Link>
@@ -38,9 +41,7 @@ const Footer= () => {
                 <Link>
                     <Text color={'teal'}>News</Text>
                 </Link>
-                <Link>
-                    <Text color={'teal'}>Contacts</Text>
-                </Link>
+                
             </Flex>
         </Flex>
         )

@@ -20,17 +20,16 @@ const HomePage = () => {
           
 
 
-        <Box padding={0} width={'90%'} h={'900px'} >
-          <Flex mt={'50px'} justify={'center'} flexWrap={'wrap'} gap={'25px'}>
+        <Box padding={0} width={'90%'} h={'1050px'} >
+          <Flex mt={'50px'} justify={'center'} flexWrap={'wrap'} gap={'25px'} width={'100%'}>
             <DiversItem/>
             <WatchItem/>
           </Flex>
-          <Flex mt={6} justify={'center'} flexWrap={'wrap'} gap={'25px'}>
+          <Flex mt={6} justify={'center'} flexWrap={'wrap'} gap={'25px'} width={'100%'}>
           <TrubkiItem/>
             <ReguliatoriItem/>
             <KurtkaItem/>
           </Flex>
-
         </Box>
 
           

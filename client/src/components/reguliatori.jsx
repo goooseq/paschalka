@@ -1,6 +1,6 @@
 import '../App.css';
 import { Text, Box,  Heading, Button, Link, ButtonGroup } from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, Image} from '@chakra-ui/react';
+import { Card, CardHeader, CardBody, Image, Flex} from '@chakra-ui/react';
 import reguliatori from '../images/reguliatori.jpg'
 import Carousel from './Carousel';
 import React from 'react';
@@ -17,16 +17,20 @@ const  ReguliatoriItem = () =>{
        >
 
        
-        <Box>
+        <Flex
+            justify={'center'}
+            align={"center"}
+        >
             {<Image
                 src={reguliatori}
-                width={'405px'}
-                height={'405px'}
+                width={'510px'}
+                height={'500px'}
                 // width={'80%'}
                 alt='Часы'
+                className='photoHover'
             /> }
-            <Text  position={'absolute'} top={160} left={'100px'} fontSize={'30px'} color={"white"}><b> <a href="#">Регуляторы </a></b></Text>
-        </Box>
+            <Text position={"absolute"} alignContent={'center'} flexWrap={'wrap'} fontSize={'30px'} color={"white"}><b> <a href="#">Регуляторы </a></b></Text>
+        </Flex>
        
 
 

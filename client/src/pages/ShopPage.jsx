@@ -4,11 +4,13 @@ import CardItem from '../components/carditem';
 import NavBar from '../components/NavBar'; 
 const ShopPage = () =>{ 
   return ( 
+    <>
+    <NavBar/> 
     <Flex 
       width={'100%'} 
       flexWrap={'wrap'} 
     > 
-       <NavBar/> 
+
     <Flex 
         justify={'center'} 
         align={'center'} 
@@ -27,7 +29,7 @@ const ShopPage = () =>{
         <CardItem/> 
     </Flex> 
     </Flex> 
-    
+    </>
   ); 
 } 
 export default ShopPage;

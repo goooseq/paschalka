@@ -1,6 +1,6 @@
 import '../App.css';
 import { Text, Box,  Heading, Button, Link, ButtonGroup } from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, Image} from '@chakra-ui/react';
+import { Card, CardHeader, CardBody, Image, Flex} from '@chakra-ui/react';
 import divers from '../images/divers.jpg'
 import Carousel from './Carousel';
 import React from 'react';
@@ -20,17 +20,22 @@ const  DiversItem = () =>{
 
 
             
-                <Box>
+            
+        <Flex
+            justify={'center'}
+            align={"center"}
+        >
             {<Image
                 src={divers}
-                width={'620px'}
-                height={'360px'}
+                width={'780px'}
+                height={'410px'}
                 // width={'80%'}
                 alt='Дайверы'
+                className='photoHover'
             /> }
-            <Text  position={'absolute'} top={200} left={"125px"} fontSize={'30px'} color={"white"}><b> <a href="#">Костюмы и аксессуары</a></b></Text>
-        </Box>
-
+            <Text position={"absolute"} alignContent={'center'} flexWrap={'wrap'} fontSize={'30px'} color={"white"}><b> <a href="#">Костюмы и аксессуары</a></b></Text>
+        </Flex>
+    
 
         </Card>
 

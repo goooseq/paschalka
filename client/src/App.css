@@ -9,7 +9,6 @@ Button:hover{
 a:hover{
     opacity: 0.7;
    /* font-size:22px; */
-   background-color: #F1F7F6;
    border-radius:13px ;
 }
 .gallery {
@@ -32,4 +31,14 @@ content: counter(gallery-cell);
 line-height: 200px;
 font-size: 80px;
 color: white;
+}
+.photoHover{
+    scale: 1;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+}
+.photoHover:hover{
+    transform: scale(1.01);
+    opacity: 0.8;
+    cursor: pointer;
 }

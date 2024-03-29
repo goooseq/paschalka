@@ -12,6 +12,13 @@ const ContactPage= () => {
         >
 
         <Flex   
+
+
+
+
+
+
+          
         width={'100%'} 
         background={''} 
         boxShadow={'rgba(0,0,0, 0.24) 0px 3px 8px;'} 
@@ -21,7 +28,7 @@ const ContactPage= () => {
         marginTop={'auto'}        
         >
 
-                    <Text  fontSize={'30px'} color={'teal'}>Please Contacts Us</Text>
+                    <Text opacity={'0.7'} fontSize={'30px'} color={'teal'}>Please Contacts Us</Text>
                 
                 <Box>
                

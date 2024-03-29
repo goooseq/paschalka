@@ -8,12 +8,26 @@ import DiversItem from '../components/divers';
 import TrubkiItem from '../components/trubki';
 import ReguliatoriItem from '../components/reguliatori';
 import KurtkaItem from '../components/kurtka';
-
+import { useEffect, useState } from 'react';
+import Loader from '../components/Loader';
 
 const HomePage = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setIsLoading(false)
+    }
+    fetchData();
+  }, [])
+  
+  
+  
+  
   return (
     <>
-        <NavBar />
+        {isLoading ?  (<Loader/>) : <NavBar/>}
         <Flex
         h={'100%'}
         justify={'center'}>

@@ -1,6 +1,6 @@
 import '../App.css';
-import { Text, Box, Flex, Grid, Input, Heading, Button} from '@chakra-ui/react';
-import { AuthRoute, HomeRoute, ShopRoute, ContactRoute } from '../utils/const';
+import { Text, Flex, Input, Heading, Button, InputLeftElement, Stack,InputGroup,InputRightElement} from '@chakra-ui/react';
+import { AuthRoute, HomeRoute, ShopRoute, ContactRoute,NewsRoute} from '../utils/const';
 import {Link} from 'react-router-dom'
 import {useRef} from 'react';
 
@@ -65,18 +65,27 @@ const NavBar = () => {
 
 
             <Flex>
+            <Stack spacing={4}>
+  <InputGroup>
+    <InputLeftElement pointerEvents='none'>
+    </InputLeftElement>
+    <Input color={'teal'} type='tel' placeholder='Search' />
+  </InputGroup>
+   
+</Stack>
+                <Link
+                    to={NewsRoute}>   
+                 <Button colorScheme='black' variant='ghost'>
+                    News
+                    </Button>
+                    </Link>
                 <Link
                     to={ShopRoute}>   
                     <Button colorScheme='black' variant='ghost'>
                         Shop
                     </Button>
-                </Link>
-                    <Button colorScheme='black' variant='ghost'>
-                    About
-                    </Button>
-                    <Button colorScheme='black' variant='ghost'>
-                    Products
-                    </Button>
+                    </Link>
+                   
             </Flex>
             
             

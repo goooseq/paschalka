@@ -37,7 +37,7 @@ const NewsPage = () => {
                         padding={'10px 50px'}
                         height={'500px'}
                         marginTop={'auto'}
-
+                        justify={'center'}
                     >
 
 
@@ -140,58 +140,42 @@ const NewsPage = () => {
 
         
                 
-                    <Box
-                    display={'flex'}
-                    justifyContent={'center'}
-                    alignItems={'center'}
-                    height={'300px'}
-                    width={'800px'}
-                    bgColor={'white'}
+                    <Flex
+                        display={'flex'}
+                        justify={'center'}
+                        alignItems={'center'}
+                        height={'300px'}
+                        width={'100%'}
+                        bgColor={'white'}
                     >
-
-
-                        <Stack spacing={4}>
-                          
-                            {/* вот тут надо доделать флексы*/}
-                                <InputGroup >
-                                    <Text color={'teal'}>Email</Text>
-                                    <InputLeftElement pointerEvents='none'>
-                                    </InputLeftElement>
-                                    <Input type='tel' placeholder='Enter your mail' />
-                                </InputGroup>
+                        <Flex justify={'center'} width={'800px'}>
+                        <Flex flexWrap={'wrap'} width={'80%'} spacing={4}>
+                                <Flex width={'90%'} justify={'space-between'}>
+                                    <Text width={'15%'} color={'teal'}>Email</Text>
+                                    <Input width={'100%'} type='tel' placeholder='Enter your mail' />
+                                </Flex>
              
-                            <InputGroup>
 
-                                <InputLeftElement
-                                    pointerEvents='none'
-                                    color='gray.300'
-                                    fontSize='1.2em'
-                                >
-                                </InputLeftElement>
-                                <Text color={'teal'}>Order Number</Text>
-                                <Input placeholder='Enter your number' />
-                                <InputRightElement>
-
-                                </InputRightElement>
-                            </InputGroup>
+                                <Flex width={'90%'} justify={'space-between'}>
+                                    <Text width={'15%'} color={'teal'}>Order</Text>
+                                    <Input width={'100%'} placeholder='Enter your number' />
+                                </Flex>
 
 
-                            <InputGroup>
-                                <Text color={'teal'}>Full Name</Text>
-                                <InputLeftElement pointerEvents='none'>
-                                </InputLeftElement>
-                                <Input type='tel' placeholder='Enter your full name' />
-                            </InputGroup>
+                                <Flex width={'90%'} justify={'space-between'}>
+                                    <Text width={'15%'} color={'teal'}>Name</Text>
+                                    <Input width={'100%'} type='tel' placeholder='Enter your full name' />
+                                </Flex>
+             
 
-
-                            <InputGroup>
-                                <Text color={'teal'}>Message</Text>
-                                <InputLeftElement pointerEvents='none'>
-                                </InputLeftElement>
-                                <Input type='tel' placeholder='Enter your massage' />
-                            </InputGroup>
-                        </Stack>
-                    </Box>
+                                <Flex width={'90%'} justify={'space-between'}>
+                                    <Text width={'15%'} color={'teal'}>Message</Text>
+                                    <Input width={'100%'} placeholder='Enter your massage' />
+                                </Flex>
+                        </Flex>
+                        </Flex>
+                       
+                    </Flex>
                 </Flex>
             </Flex>
 

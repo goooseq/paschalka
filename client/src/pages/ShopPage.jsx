@@ -1,6 +1,8 @@
 import '../App.css'; 
 import { Flex } from '@chakra-ui/react'; 
 import CardItem from '../components/carditem'; 
+// import ScorpenaAlpha from '../components/ScorpenaAlpha'; 
+
 import NavBar from '../components/NavBar'; 
 const ShopPage = () =>{ 
   return ( 
@@ -27,6 +29,7 @@ const ShopPage = () =>{
         <CardItem/> 
         <CardItem/> 
         <CardItem/> 
+        {/* <ScorpenaAlpha/>  */}
     </Flex> 
     </Flex> 
     </>

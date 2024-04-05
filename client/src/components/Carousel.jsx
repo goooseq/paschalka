@@ -1,23 +1,23 @@
-// import React, { useState } from 'react';
-
-// const Carousel = ({ images }) => {
-//   const [currentIndex, setCurrentIndex] = useState(0);
-
-//   const handleNext = () => {
-//     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+// const SimpleCarousel = () => {
+//     const settings = {
+//       dots: true,
+//       infinite: true,
+//       speed: 500,
+//       slidesToShow: 1,
+//       slidesToScroll: 1,
+//     };
+  
+//     return (
+//       <Slider {...settings}>
+//         <div>
+//           <img src='https://via.placeholder.com/350x150' alt='slide-1' />
+//         </div>
+//         <div>
+//           <img src='https://via.placeholder.com/350x150' alt='slide-2' />
+//         </div>
+//         <div>
+//           <img src='https://via.placeholder.com/350x150' alt='slide-3' />
+//         </div>
+//       </Slider>
+//     );
 //   };
-
-//   const handlePrevious = () => {
-//     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-//   };
-
-//   return (
-//     <div>
-//       <button onClick={handlePrevious}>Previous</button>
-//       <img src={images[currentIndex]} alt="carousel" />
-//       <button onClick={handleNext}>Next</button>
-//     </div>
-//   );
-// };
-
-// export default Carousel;

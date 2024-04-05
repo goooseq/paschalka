@@ -12,6 +12,7 @@ const NavBar = () => {
         <Flex>
         <Flex
                     bgColor={'#FF8F4B'}
+                    // bgColor={'teal'}
                     align={'center'}
                     justifyContent={'space-between'}
                     width={'100%'}

@@ -7,6 +7,7 @@ const router = require('./router/index')
 
 const PORT = process.env.PORT;
 const app = express();
+const baseURL = process.env.LOCAL_CLIENT_URL;
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
@@ -16,6 +17,7 @@ app.use(cors({
 const options = {
     dbName: 'Forial'
 };
+app.use('/api' ,router)
 
 const start = async () => {
     try{

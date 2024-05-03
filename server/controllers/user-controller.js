@@ -12,6 +12,10 @@ class UserController {
     } 
     async refresh(req, res, next) { 
       try { 
+        const {email,password} = req.body()
+        const userData = await userService.login(email,password)
+        res.cookie('refreshToken',userData.refreshToken,{});
+        return res.json(userData);
       } catch (e) { 
         console.log(e); 
       } 
@@ -30,6 +34,9 @@ class UserController {
     } 
     async activate(req, res, next) { 
         try { 
+        const activationLink = req.params.link; 
+        await userService.activate(activationLink)
+        return res.redirect(process.env.LOCAL_CLIENT_URL)
         } catch (e) { 
           console.log(e); 
         } 

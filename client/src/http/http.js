@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { LOCAL_API_URL } from '../utils/consts';
+import { LOCAL_API_URL } from '../utils/const';
 
 const baseURL = LOCAL_API_URL;
 

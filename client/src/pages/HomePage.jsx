@@ -1,4 +1,4 @@
-import { Flex, Box } from '@chakra-ui/react';
+import { Flex, Box, useConst } from '@chakra-ui/react';
 import '../App.css';
 import CardItem from '../components/carditem';
 import NavBar from '../components/NavBar';
@@ -10,19 +10,28 @@ import ReguliatoriItem from '../components/reguliatori';
 import KurtkaItem from '../components/kurtka';
 import { useEffect, useState } from 'react';
 import Loader from '../components/Loader';
+import {Context} from '../index'; 
+import { useContext } from 'react'; 
 
 const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true)
+        const {store} = useContext(Context);
+        const [email,setEmail] = useState('');
+        const handEmailChange = (event) => {
+          setEmail(event.target.value);
+        }
+        const handleSubmit = ()=> {
+          alert(`Email: ${email}`)};
 
-  useEffect(() => {
-    const fetchData = async () => {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setIsLoading(false)
-    }
-    fetchData();
-  }, [])
-  
-  
+        useEffect(() => { 
+          const checkAuth = async () =>{ 
+              if(localStorage.getItem('token')){ 
+                  await store.checkAuth(); 
+              } 
+              setIsLoading(false) 
+          } 
+          checkAuth(); 
+      }, [store])
   
   
   return (

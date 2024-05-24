@@ -1,6 +1,6 @@
 import axios from "axios"; 
-import AuthenticationService from "../services/AuthenticationService"; 
-import { LOCAL_API_URL } from "../utils/consts"; 
+import AuthenticationService from "../service/AuthenticaitionService";
+import { LOCAL_API_URL } from "../utils/const"; 
 export default class Store { 
 error = {}; 
 user = {}; 

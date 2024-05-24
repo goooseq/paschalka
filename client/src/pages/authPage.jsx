@@ -1,14 +1,14 @@
 import { Flex, Text, Input, InputGroup, Stack, InputLeftElement, Button, WrapItem } from '@chakra-ui/react';
 import NavBarSh from '../components/NavBarSh';
-import { AuthRoute, RegisterRoute } from '../utils/const';
+import { RegisterRoute } from '../utils/const';
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
+import { Context } from '../index';
 
 const AuthPage = () => { 
-    const [typePass, setTypePass] = useState(false);
-    const { store } = useContext; 
-    const [email, setError] = useContext;
-    const [password, setPassword] = useContext;
+    const { store } = useContext(Context); 
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const handlelogin = async(email,password)=>{ 
         try{ 
             await store.login(email,password); 
@@ -46,16 +46,6 @@ const AuthPage = () => {
                 >
                     <Text mt={'7%'} fontSize={'35px'} fontWeight={'bold'} textAlign={'center'} w={'100%'} color={'Black'}> Sign in</Text>
                     <Stack spacing={4}>
-                        <InputGroup>
-                            <InputLeftElement pointerEvents='none' color='gray' width={'25px'} top={'0px'} left={'10px'}>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 256 256">
-                                    <path fill="currentColor" d="M230.92 212c-15.23-26.33-38.7-45.21-66.09-54.16a72 72 0 1 0-73.66 0c-27.39 8.94-50.86 27.82-66.09 54.16a8 8 0 1 0 13.85 8c18.84-32.56 52.14-52 89.07-52s70.23 19.44 89.07 52a8 8 0 1 0 13.85-8ZM72 96a56 56 0 1 1 56 56a56.06 56.06 0 0 1-56-56Z" />
-                                </svg>
-                            </InputLeftElement>
-
-                            <Input type='tel' placeholder='Login' />
-
-                        </InputGroup>
 
                         <InputGroup>
                             <InputLeftElement
@@ -70,7 +60,7 @@ const AuthPage = () => {
                                     <path fill="currentColor" fill-rule="evenodd" d="M14.95 3.684L8.637 8.912a1 1 0 0 1-1.276 0l-6.31-5.228A.999.999 0 0 0 1 4v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a.999.999 0 0 0-.05-.316M2 2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m-.21 1l5.576 4.603a1 1 0 0 0 1.27.003L14.268 3z" />
                                 </svg>
                             </InputLeftElement>
-                            <Input placeholder='Email' />
+                            <Input placeholder='Email' onChange={e => setEmail(e.target.value)} value={email} />
                         </InputGroup>
 
                         <InputGroup>
@@ -87,7 +77,7 @@ const AuthPage = () => {
                                 </svg>
                             </InputLeftElement>
                             <Input placeholder='Password'
-                            
+                            onChange={e => setPassword(e.target.value)} value={password}
                             
                             
                             />
@@ -96,7 +86,7 @@ const AuthPage = () => {
 
                         </InputGroup>
                         <WrapItem>
-                            <Button colorScheme='teal' w={'250px'} textAlign={'center'}>Register</Button>
+                            <Button onClick={() => handlelogin(email, password)} colorScheme='teal' w={'250px'} textAlign={'center'}>Login</Button>
                         </WrapItem>
                         <Flex mt={'7%'} textAlign={'center'} w={'100%'} color={'Black'}>
                             <Text mr={'5px'}> Do you have an account? </Text>

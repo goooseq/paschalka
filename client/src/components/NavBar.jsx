@@ -3,10 +3,14 @@ import { Text, Flex, Input, Heading, Button, InputLeftElement, Stack,InputGroup,
 import { AuthRoute, HomeRoute, ShopRoute, ContactRoute,NewsRoute} from '../utils/const';
 import {Link} from 'react-router-dom'
 import {useRef} from 'react';
-
-
-const NavBar = () => {
-    const prevScrollY = useRef(0);
+import {Context} from '../index'; 
+import { useContext } from 'react'; 
+import { observer } from 'mobx-react-lite'; 
+const NavBar = () => { 
+    const prevScrollY = useRef(0); 
+    const [isNavBarVisible, setIsNavBarVisible] = useState(true); 
+    const {store} = useContext(Context)
+    {store.isAuth ? (<div>Hello</div>):(<Link to={AuthRoute}>)};
     return (
       <>
         <Flex>
@@ -91,7 +95,17 @@ const NavBar = () => {
                     </Link>
                    
             </Flex>
-            
+            <Flex> 
+                {store.isAuth ? (<div>Hello</div>) :( 
+                    <Link  to={AuthRoute}> 
+                        <button className='header_btn'>Login</button> 
+                    </Link> 
+                )} 
+                {/* <Link> 
+                    <button className='header_btn'>Basket</button> 
+                </Link> 
+             */} 
+            </Flex>
             
             
         
